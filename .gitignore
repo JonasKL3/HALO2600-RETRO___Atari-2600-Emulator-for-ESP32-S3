@@ -1,0 +1,23 @@
+# Wi-Fi credentials
+WiFiConfig.h
+**/WiFiConfig.h
+
+# ROM files
+*.bin
+*.a26
+*.rom
+*.c26
+
+# Arduino / ESP32 build files
+build/
+*.elf
+*.map
+*.hex
+
+# IDE settings
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
