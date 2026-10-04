@@ -1,0 +1,3 @@
+HALO RETRO v1.0 FINAL
+Build baseline: 2026-10-03
+Target: ESP32-S3 N16R8 DEV MODULE-1
