@@ -9,6 +9,17 @@ Instale o core ESP32 da Espressif e selecione:
 - USB CDC On Boot: `Enabled`
 - Partition Scheme: `Huge APP (3MB No OTA/1MB SPIFFS)` ou equivalente com APP >= 3 MB e filesystem
 
+### Ambiente testado
+
+Este projeto foi desenvolvido e validado com:
+
+- Board: ESP32S3 Dev Module
+- Arduino ESP32 Core: 3.3.12
+- Flash Size: 16MB (128Mb)
+- USB CDC On Boot: Enabled
+- Partition Scheme: Huge APP (3MB No OTA/1MB SPIFFS)
+
+Versões posteriores do Arduino ESP32 Core podem funcionar, mas ainda não foram validadas oficialmente.
 ## 2. Bibliotecas
 
 Instale:
