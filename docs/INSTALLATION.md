@@ -27,6 +27,12 @@ Instale:
 - TFT_eSPI (Bodmer)
 - DabbleESP32 (STEMpedia)
 
+### Verificacao obrigatoria de estabilidade BLE
+
+A biblioteca DabbleESP32 pode conter um defeito que leva a `assert failed: heap_caps_free` durante o processamento do GamePad. A ocorrencia foi confirmada em outro projeto ESP32-S3, e o HALO usa a mesma biblioteca. Leia [DABBLE_BLE_RESET.md](DABBLE_BLE_RESET.md) para diagnostico, backup, patch e reversao.
+
+O arquivo `tools/CORRIGIR-DABBLE-ESP32S3.ps1` automatiza a correcao na biblioteca instalada, **nao no firmware do HALO**. Depois de aplicar, **recompile e grave**. Atualizacoes da biblioteca podem remover o patch.
+
 ## 3. TFT_eSPI
 
 Configure o ILI9341 e GPIOs conforme `HARDWARE.md`.

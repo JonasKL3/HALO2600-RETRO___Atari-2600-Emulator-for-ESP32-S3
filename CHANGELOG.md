@@ -1,5 +1,12 @@
 # Changelog
 
+## Documentacao - 2026-10-10
+
+- Registrado risco de reset `heap_caps_free` na dependencia DabbleESP32, diagnosticado em outro projeto ESP32-S3.
+- Guia de analise, correcao reversivel e script Windows com backup.
+- Firmware HALO v1.0.0 e releases inalterados; risco ainda nao reproduzido no HALO.
+
+
 ## v1.0.0
 
 Baseline estavel Atari 2600 para ESP32-S3.

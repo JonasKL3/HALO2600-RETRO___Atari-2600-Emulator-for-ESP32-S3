@@ -34,13 +34,15 @@ HALO-2600-RETRO-ESP32S3/
 └── README.md
 ```
 
+> **AVISO - DabbleESP32 e resets aleatorios:** foi diagnosticada uma falha de memoria `heap_caps_free` em outro projeto ESP32-S3 que usa DabbleESP32. O HALO tambem usa a biblioteca e chama `Dabble.processInput()`, portanto **pode ser afetado**. O patch foi confirmado pelo autor no SPACE SHOOTER, **nao houve reproducao do reset no HALO nesta investigacao**. Leia [o diagnostico e correcao](docs/DABBLE_BLE_RESET.md). **O firmware ja gravado nao recebe automaticamente o patch: e preciso corrigir a biblioteca instalada, recompilar e gravar novamente.**
+
 ## Instalacao rapida
 
 1. Arduino IDE: selecione **ESP32S3 Dev Module**.
 2. Flash Size: **16MB (128Mb)**.
 3. USB CDC On Boot: **Enabled**.
 4. Partition Scheme: **Huge APP (3MB No OTA/1MB SPIFFS)** ou equivalente com APP >= 3 MB e filesystem.
-5. Instale as bibliotecas **TFT_eSPI** e **DabbleESP32**.
+5. Instale **TFT_eSPI** e **DabbleESP32**, verificando antes da compilacao a [correcao de memoria do Dabble](docs/DABBLE_BLE_RESET.md).
 6. Configure TFT_eSPI conforme `docs/HARDWARE.md`.
 7. Copie `WiFiConfig.example.h` para `WiFiConfig.h` e preencha SSID/senha.
 8. Abra `firmware/HALO_2600_RETRO_ESP32S3/HALO_2600_RETRO_ESP32S3.ino`.
